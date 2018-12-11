@@ -1,0 +1,35 @@
+.menu {
+    position: absolute;
+    color: #999;
+    width: 200px;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    display: none;
+    transition: opacity .4s;
+
+    &::after {
+        position: absolute;
+        top: -15px;
+        left: 95px;
+        content: "";
+        display: block;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid white;
+    }
+
+    &.show {
+        opacity: 1;
+        display: block;
+    }
+
+    &.hide {
+        opacity: 0;
+        display: none;
+    }
+}

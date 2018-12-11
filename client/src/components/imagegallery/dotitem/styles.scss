@@ -1,0 +1,14 @@
+.dot-item {
+    background: #aaaaaa;
+    border-radius: .75em;
+    cursor: pointer;
+    display: inline-block;
+    height: .75em;
+    margin: 0 .75em;
+    width: .75em;
+
+    &.is-active {
+        background: #ffffff;
+        box-shadow: 0 0 3px 3px #ddd;
+    }
+}

@@ -1,0 +1,104 @@
+@import "../../../assets/variable";
+
+.inputgroup-item {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    padding-right: 10px;
+
+    input {
+        position: relative;
+        outline: none;
+        border: none;
+        background: none;
+        border-bottom: 1px solid #ccc;
+        appearance: none;
+        border-radius: 0;
+        width: 100%;
+        background-color: antiquewite;
+        padding: 5px 0px;
+        font-family: inherit;
+        box-sizing: border-box;
+        z-index: 2;
+        font-size: $input_font_size;
+
+        &::placeholder {
+            opacity: 0;
+        }
+
+        &:focus {
+            border-bottom: 1px solid $color_active;
+
+            &:valid {
+                color: $color_active;
+            }
+
+            &:invalid {
+                color: $color_error;
+            }
+        }
+
+        &:focus + label, &:valid + label, &:not(:placeholder-shown) + label {
+            font-size: 75%;
+            color: $color_active;
+            transform: translate3d(0, 0, 0);
+        }
+
+        &:not(:focus) {
+            &:not(:placeholder-shown) {
+                &:invalid {
+                    border-bottom: 1px solid $color_error;
+                    color: $color_error;
+
+                    + label {
+                        color: $color_error;
+                    }
+                }
+            }
+        }
+
+        &:valid {
+            border-bottom: 2px solid $color_active;
+            color: $color_active;
+        }
+    }
+
+    .label {
+        font-size: $input_font_size;
+        text-transform: capitalize;
+        display: inline-block;
+        font-weight: bold;
+
+        &__name {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            transition: 0.2s;
+            z-index: 1;
+            color: $place_holder_text;
+            transform: translate3d(0, 20px, 0);
+        }
+
+        &__error {
+            color: $error_color;
+            padding-top: 2px;
+        }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+        -webkit-transition-delay: 9999s;
+    }
+
+    .error-space {
+        float: right;
+        min-height: 24px;
+        min-width: 1px;
+    }
+}

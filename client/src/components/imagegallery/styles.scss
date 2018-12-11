@@ -1,0 +1,52 @@
+.gallery-section {
+    background: #272822;
+    height: 255px;
+    margin: 0 auto 2em;
+    overflow: hidden;
+    position: relative;
+
+    > .content-section {
+        height: 200px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .btn {
+        background: transparent;
+        border: 0;
+        color: #e0e0e0;
+        cursor: pointer;
+        font-size: 10em;
+        height: 200px;
+        outline: 0;
+        position: absolute;
+        top: 0;
+        text-shadow: 0 0 10px #444444;
+        width: 90px;
+        transition: all 0.2s ease;
+
+        &-prev {
+            right: 0;
+        }
+
+        &-next {
+            left: 0;
+        }
+
+        &:hover {
+            color: #272822;
+        }
+    }
+
+    .dot-section {
+        display: inline-block;
+        height: 1.25em;
+        margin: 0;
+        position: absolute;
+        bottom: 1em;
+        right: 1em;
+        width: auto;
+    }
+}

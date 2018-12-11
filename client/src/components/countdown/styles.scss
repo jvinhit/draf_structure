@@ -1,0 +1,67 @@
+@import "../../assets/variable";
+
+.input-section {
+    background: #2f3640;
+    z-index: 1;
+
+    .header__section {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+
+        h2 {
+            color: #fff;
+            text-transform: uppercase;
+            padding: 10px 5px;
+            text-align: center;
+
+            &::after {
+                background-color: #563d7c;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .content__section {
+        padding: 15px;
+
+        .inputgroup-item {
+            width: calc(100% / 6 );
+        }
+    }
+
+    .countdown__section {
+        ul {
+            list-style: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+    }
+
+    .message-section {
+        text-align: center;
+        color: #e74c3c;
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        .input-section {
+            padding: 20px;
+
+            .inputgroup-item {
+                width: 100%;
+            }
+        }
+    }
+}

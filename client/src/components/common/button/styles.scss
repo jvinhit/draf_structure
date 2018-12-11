@@ -1,0 +1,44 @@
+@import "../../../assets/variable";
+
+.button-wrapper {
+    text-align: center;
+    padding: 20px;
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        color: $color_header;
+
+        &:hover {
+            &:not([disabled]) {
+                cursor: pointer;
+                color: $color_success;
+                background: white;
+                animation: zoom .2s;
+            }
+        }
+
+        &:disabled, &[disabled] {
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
+
+        span {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
